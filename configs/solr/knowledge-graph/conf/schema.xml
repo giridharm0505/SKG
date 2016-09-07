@@ -1,10 +1,10 @@
-<schema name="blank" version="1.5">
+<schema name="blank" version="1.6">
 
   <uniqueKey>id</uniqueKey>
 
   <fields>
 	  <field name="id" type="keyword" indexed="true" stored="true" required="false" multiValued="false" />
-<field name="content" type="text" indexed="true" stored="false" required="false" multiValued="true" />
+    <field name="content" type="text" indexed="true" stored="false" required="false" multiValued="true" />
 	  <field name="field.v1" type="keyword" indexed="true" stored="false" required="false" multiValued="true"/>
 	  <field name="field.v1.id-name" type="keyword-case-sens" indexed="true" stored="false" required="false" multiValued="true" docValues="true"/> 
 	  <field name="_version_" type="long" indexed="true" stored="true"/>

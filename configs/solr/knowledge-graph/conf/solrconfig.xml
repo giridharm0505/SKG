@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <config>
-  <luceneMatchVersion>5.10</luceneMatchVersion>
+  <luceneMatchVersion>6.2.0</luceneMatchVersion>
   <lib dir="../../lib" regex=".*\.jar" />
   <dataDir>../../../cores/skg/data</dataDir>
   <directoryFactory name="DirectoryFactory" 
@@ -78,8 +78,8 @@
                   class="solr.DocumentAnalysisRequestHandler" 
                   startup="lazy" />
 
-  <requestHandler name="/admin/" 
-                  class="solr.admin.AdminHandlers" />
+  <!--<requestHandler name="/admin/" 
+                  class="solr.admin.AdminHandlers" /> -->
   
   <!-- ping/healthcheck -->
   <requestHandler name="/admin/ping" class="solr.PingRequestHandler">
