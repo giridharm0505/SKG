@@ -1,4 +1,4 @@
-#Semantic Knowledge Graph
+# Semantic Knowledge Graph
 *A graph structure, build automatically from a corpus of data, for traversing and measuring relationships within a domain*
 
 The Semantic Knowledge Graph serves as a data scientist's toolkit, allowing you to discover and compare any entities modeled within a corpus of data from any domain. For example, if you indexed a corpus of job postings, you could figure out what the most related job titles are for the phrase "account manager", and subsequently what the top skills are for each of those job titles. You can also use the system to rank a list of entities or keywords based upon their statistical relationship with any other group of entities or terms, and you can traverse these relationships any number of levels deep.  The Semantic Knowledge Graph will allow you to slice and dice the universe of terms and entites represented within your corpus in order to discover as many of these insights as you have the time and curiosity to pursue.
@@ -22,7 +22,7 @@ Please cite the Semantic Knowledge Graph in your publications if it helps your r
       Year = {2016}
     }
 
-#Usage (examples from the job search domain):
+# Usage (examples from the job search domain):
 
 *Request:*
 ```
@@ -119,7 +119,7 @@ Response:
 }
 ```
 
-#Available Request Options
+# Available Request Options
 **queries**	String[]  
 A set of Solr queries which will be used to generate entities for scoring. If no foreground queries are supplied, these queries will also be used to score the entities. Multiple queries are merged to find the intersection between them (equivalent of a boolean AND query). See the types parameter for query field types. 
 
@@ -168,8 +168,8 @@ The minimum popularity of returned results (assuming exactly 1 million total doc
 **normalize_values** optional	boolean  
 Whether the API should attempt to find ids and names for passed-in values. If false, the API will return passed-in values in the name field without regard to whether they represent an id or name for an entity. Turning normalization off may boost performance. Defaults to "true."
 
-#Building and Running
+# Building and Running
 The easiest way to build the Semantic Knowledg Graph is to run the `build.sh` script in the root directory of the project (or `rebuild.sh`, which will build and launch an Apache Solr instance with the Semantic Knowledge Graph configured). The final application will be found in the `deploy` directory, and you can launch it using the `restart-solr.sh` script found in that directory. You can simply copy this `deploy` folder to your production environment and run the `restart-solr.sh` script to launch the service. By default, you can hit it at `http://localhost:8983/solr/knowledge-graph/rel`. See the example in the Examples section above for usage.
 
-#Using the System
+# Using the System
 Once the Semantic Knowledge Graph project has been built, you need to indexing a corpus of data through it by running the `feed.sh` script. The fields you include in your corpus should correspond to the fields defined in your Solr `schema.xml` found in the `deploy/solr/knowledge-graph/conf` directory.
