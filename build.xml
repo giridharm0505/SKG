@@ -81,7 +81,8 @@
         </copy>
 
         <echo message="Integrating knowledge-graph..."/>
-        <copy todir="${deploy.dir}/solr/server/lib">
+        <mkdir dir="${deploy.dir}/solr/server/solr/knowledge-graph/lib"/>
+        <copy todir="${deploy.dir}/solr/server/solr/knowledge-graph/lib">
             <fileset dir="${basedir}/knowledge-graph/target">
                 <include name="*.jar"/>
             </fileset>
