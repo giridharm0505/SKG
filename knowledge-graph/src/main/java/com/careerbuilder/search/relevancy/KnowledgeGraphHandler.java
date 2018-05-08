@@ -85,16 +85,6 @@ public class KnowledgeGraphHandler extends RequestHandlerBase
     {
         return "Ranks tags using corpus of tagged data";
     }
-
-    @Override
-    public String getSource() {
-        return "$Source$";
-    }
-
-    @Override
-    public String getVersion() {
-        return "$Revision$";
-    }
-
+    
 
 }
